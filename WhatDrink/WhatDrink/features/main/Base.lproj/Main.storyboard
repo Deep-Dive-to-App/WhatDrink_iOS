@@ -11,7 +11,7 @@
         <!--설정-->
         <scene sceneID="IAh-2P-cmL">
             <objects>
-                <viewController id="KzC-AL-dYa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetttingViewController" id="KzC-AL-dYa" customClass="SetttingViewController" customModule="WhatDrink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="84c-b1-1uC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
