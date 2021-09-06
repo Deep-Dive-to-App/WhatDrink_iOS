@@ -7,11 +7,16 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareRoundB.ttf">
+            <string>NanumSquareRoundB</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--설정-->
         <scene sceneID="IAh-2P-cmL">
             <objects>
-                <viewController id="KzC-AL-dYa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetttingViewController" id="KzC-AL-dYa" customClass="SetttingViewController" customModule="WhatDrink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="84c-b1-1uC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,14 +36,47 @@
                     <view key="view" contentMode="scaleToFill" id="jLN-J4-Ffq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CK-wF-yFn">
+                                <rect key="frame" x="66" y="301" width="282" height="297"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4CK-wF-yFn" secondAttribute="height" multiplier="1:1" id="CV9-f8-xph"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="38"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="음료 분석 시작"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뭐마실뀨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMf-i8-ndd">
+                                <rect key="frame" x="20" y="64" width="125" height="40"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Hpy-Ri-aUM"/>
+                                    <constraint firstAttribute="height" constant="40" id="Lpr-Pl-oQU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="s6B-U8-gYp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pMf-i8-ndd" firstAttribute="top" secondItem="s6B-U8-gYp" secondAttribute="top" constant="20" id="C6O-3B-Y7a"/>
+                            <constraint firstItem="4CK-wF-yFn" firstAttribute="centerY" secondItem="s6B-U8-gYp" secondAttribute="centerY" id="ZPg-b0-3Dy"/>
+                            <constraint firstItem="4CK-wF-yFn" firstAttribute="width" secondItem="s6B-U8-gYp" secondAttribute="width" multiplier="0.75" id="gfY-Wi-JOY"/>
+                            <constraint firstItem="4CK-wF-yFn" firstAttribute="centerX" secondItem="s6B-U8-gYp" secondAttribute="centerX" id="xpT-Iy-j2u"/>
+                            <constraint firstItem="pMf-i8-ndd" firstAttribute="leading" secondItem="s6B-U8-gYp" secondAttribute="leading" constant="20" id="yz5-dm-bQz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="음료 찾기" selectedImage="magnifyingglass" catalog="system" id="9M1-Nt-qiM"/>
+                    <connections>
+                        <outlet property="detectDrinkButton" destination="4CK-wF-yFn" id="EnC-Lw-4gm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46X-tL-oEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="-424"/>
+            <point key="canvasLocation" x="2020.289855072464" y="-424.55357142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="O3h-0P-Ghq">
