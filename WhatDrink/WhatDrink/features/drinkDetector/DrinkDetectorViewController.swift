@@ -23,6 +23,9 @@ class DrinkDetectorViewController: UIViewController {
         detectDrinkButton.layer.masksToBounds = true
     }
 
-
+    @IBAction func detectDrinkButtonTapped(_ sender: Any) {
+        
+    }
+    
 }
 
