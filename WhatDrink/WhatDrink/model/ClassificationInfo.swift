@@ -20,7 +20,7 @@ class ClassificationInfo {
         case "1":
             return "펩시콜라"
         case "2":
-            return "칠성사이다"
+            return "스프라이트"
         case "3":
             return "웰치스포도"
         case "4":

@@ -21,7 +21,7 @@ class ImageClassificationViewController: UIViewController {
     /// - Tag: MLModel Setup
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
-            let model = try VNCoreMLModel(for: beverage().model)
+            let model = try VNCoreMLModel(for: beverage_1().model)
             
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.ProcessClassifications(for: request, error: error)
@@ -65,8 +65,9 @@ class ImageClassificationViewController: UIViewController {
                 let prediction = topClassification.first?.identifier
                 self.classificationInfo.prediction = prediction
             }
+            
+            resultVC.modalPresentationStyle = .fullScreen
+            self.present(resultVC, animated: false, completion: nil)
         }
-        resultVC.modalPresentationStyle = .fullScreen
-        self.present(resultVC, animated: false, completion: nil)
     }
 }
