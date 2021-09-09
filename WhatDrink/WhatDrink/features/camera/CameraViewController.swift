@@ -95,6 +95,9 @@ class CameraViewController: UIViewController {
         let videoPreviewLayerOrientation = self.previewView.videoPreviewLayer.connection?.videoOrientation
         sessionQueue.async {
             let connection = self.photoOutput.connection(with: .video)
+            connection?.videoOrientation = videoPreviewLayerOrientation!
+            let setting = AVCapturePhotoSettings()
+            self.photoOutput.capturePhoto(with: setting, delegate: self)
         }
     }
     
