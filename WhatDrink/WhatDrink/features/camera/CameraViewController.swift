@@ -117,3 +117,11 @@ extension CameraViewController {
         
     }
 }
+
+extension CameraViewController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard error == nil else { return }
+        guard let imageData = photo.fileDataRepresentation() else { return }
+        guard let image = UIImage(data: imageData) else { return }
+    }
+}
