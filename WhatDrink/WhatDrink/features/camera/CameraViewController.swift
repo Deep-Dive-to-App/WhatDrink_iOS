@@ -106,15 +106,55 @@ class CameraViewController: UIViewController {
 // MARK: - Setup session & preview
 extension CameraViewController {
     func setupSession() {
+        /// setting
+        captureSession.sessionPreset = .high        // 고화질
+        captureSession.beginConfiguration()
         
+        /// add video input
+        var defaultVideoDevice: AVCaptureDevice?
+        guard let camera = videoDeviceDiscoverySession.devices.first else {     // 세션에서 기기 찾아오기
+            captureSession.commitConfiguration()
+            return
+        }
+        do {
+            let vidoeDeviceInput = try AVCaptureDeviceInput(device: camera)
+            if captureSession.canAddInput(vidoeDeviceInput) {
+                captureSession.addInput(vidoeDeviceInput)
+                self.videoDeviceInput = vidoeDeviceInput
+            } else {
+                captureSession.commitConfiguration()
+                return
+            }
+        } catch let error {
+            captureSession.commitConfiguration()
+            return
+        }
+        
+        /// add photo output
+        photoOutput.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)   // 사진 저장 형식
+        if captureSession.canAddOutput(photoOutput) {
+            captureSession.addOutput(photoOutput)
+        } else {
+            captureSession.commitConfiguration()
+            return
+        }
+        captureSession.commitConfiguration()
     }
     
     func startSession() {
-        
+        sessionQueue.async {
+            if !self.captureSession.isRunning {
+                self.captureSession.startRunning()
+            }
+        }
     }
     
     func stopSession() {
-        
+        sessionQueue.async {
+            if self.captureSession.isRunning {
+                self.captureSession.stopRunning()
+            }
+        }
     }
 }
 
