@@ -171,5 +171,11 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         guard error == nil else { return }
         guard let imageData = photo.fileDataRepresentation() else { return }
         guard let image = UIImage(data: imageData) else { return }
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let imageClassificationVC = sb.instantiateViewController(identifier: "ImageClassificationViewController") as! ImageClassificationViewController
+        imageClassificationVC.updateClassifications(for: image)
+        imageClassificationVC.modalPresentationStyle = .fullScreen
+        present(imageClassificationVC, animated: false, completion: nil)
     }
 }

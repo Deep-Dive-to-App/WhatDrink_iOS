@@ -81,6 +81,39 @@
             </objects>
             <point key="canvasLocation" x="2020.289855072464" y="-424.55357142857139"/>
         </scene>
+        <!--Image Classification View Controller-->
+        <scene sceneID="4e4-eE-v2M">
+            <objects>
+                <viewController storyboardIdentifier="ImageClassificationViewController" id="W4K-zv-mwZ" customClass="ImageClassificationViewController" customModule="WhatDrink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="foB-ni-INd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="분석중입니다 ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fM-AW-0ZJ">
+                                <rect key="frame" x="31" y="417" width="352" height="199"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7fM-AW-0ZJ" secondAttribute="height" multiplier="352:199" id="B2m-ge-Eei"/>
+                                    <constraint firstAttribute="width" secondItem="7fM-AW-0ZJ" secondAttribute="height" multiplier="172:35" id="uVh-XS-Fhr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="63"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PdG-wU-PSh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7fM-AW-0ZJ" firstAttribute="centerY" secondItem="PdG-wU-PSh" secondAttribute="centerY" id="9kK-Dd-RRr"/>
+                            <constraint firstItem="7fM-AW-0ZJ" firstAttribute="centerX" secondItem="PdG-wU-PSh" secondAttribute="centerX" id="gAX-J1-Fw6"/>
+                            <constraint firstItem="7fM-AW-0ZJ" firstAttribute="width" secondItem="foB-ni-INd" secondAttribute="width" multiplier="0.85" id="sh9-aW-1LY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVQ-jc-vVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2979.7101449275365" y="-425.22321428571428"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="O3h-0P-Ghq">
             <objects>
