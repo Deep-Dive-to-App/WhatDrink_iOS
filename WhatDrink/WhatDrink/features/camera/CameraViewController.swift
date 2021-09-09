@@ -53,6 +53,9 @@ class CameraViewController: UIViewController {
     
     // 카메라 전환 액션함수
     @IBAction func backButtonTapped(_ sender: Any) {
+        
+    }
+    @IBAction func switchButtonTapped(_ sender: Any) {
         sessionQueue.async {
             /// 반대편 카메라 찾기
             let currentVideoDevice = self.videoDeviceInput.device
@@ -87,9 +90,6 @@ class CameraViewController: UIViewController {
                 }
             }
         }
-    }
-    @IBAction func switchButtonTapped(_ sender: Any) {
-        
     }
     @IBAction func captureButtonTapped(_ sender: Any) {
         let videoPreviewLayerOrientation = self.previewView.videoPreviewLayer.connection?.videoOrientation
