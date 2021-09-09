@@ -9,6 +9,7 @@ import UIKit
 
 class DrinkDetectorViewController: UIViewController {
 
+    let classificationInfo = ClassificationInfo.shared
     @IBOutlet weak var detectDrinkButton: UIButton!
     
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class DrinkDetectorViewController: UIViewController {
     }
 
     @IBAction func detectDrinkButtonTapped(_ sender: Any) {
+        classificationInfo.count += 1
         let storyboard = UIStoryboard(name: "Camera", bundle: nil)
         let cameraVC = storyboard.instantiateViewController(identifier: "CameraViewController") as! CameraViewController
         cameraVC.modalPresentationStyle = .fullScreen

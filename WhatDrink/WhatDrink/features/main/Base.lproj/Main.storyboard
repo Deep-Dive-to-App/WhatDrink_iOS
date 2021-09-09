@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RA9-o1-BQn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fcD-6u-IkV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -13,22 +13,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--설정-->
-        <scene sceneID="IAh-2P-cmL">
-            <objects>
-                <viewController storyboardIdentifier="SetttingViewController" id="KzC-AL-dYa" customClass="SetttingViewController" customModule="WhatDrink" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="84c-b1-1uC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="d3q-a6-AlJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="설정" selectedImage="gear" catalog="system" id="rKo-Fa-PwP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qQE-Xt-OHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2020" y="245"/>
-        </scene>
         <!--음료 찾기-->
         <scene sceneID="oxv-H1-1Yk">
             <objects>
@@ -89,59 +73,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="분석중입니다 ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fM-AW-0ZJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fM-AW-0ZJ">
                                 <rect key="frame" x="31" y="417" width="352" height="199"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="7fM-AW-0ZJ" secondAttribute="height" multiplier="352:199" id="B2m-ge-Eei"/>
-                                    <constraint firstAttribute="width" secondItem="7fM-AW-0ZJ" secondAttribute="height" multiplier="172:35" id="uVh-XS-Fhr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="63"/>
+                                <string key="text">분석중
+…</string>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PdG-wU-PSh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="7fM-AW-0ZJ" firstAttribute="centerY" secondItem="PdG-wU-PSh" secondAttribute="centerY" id="9kK-Dd-RRr"/>
                             <constraint firstItem="7fM-AW-0ZJ" firstAttribute="centerX" secondItem="PdG-wU-PSh" secondAttribute="centerX" id="gAX-J1-Fw6"/>
-                            <constraint firstItem="7fM-AW-0ZJ" firstAttribute="width" secondItem="foB-ni-INd" secondAttribute="width" multiplier="0.85" id="sh9-aW-1LY"/>
+                            <constraint firstItem="7fM-AW-0ZJ" firstAttribute="width" secondItem="foB-ni-INd" secondAttribute="width" multiplier="0.7" id="i06-8l-mht"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVQ-jc-vVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2979.7101449275365" y="-425.22321428571428"/>
+            <point key="canvasLocation" x="2767" y="-425"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="O3h-0P-Ghq">
+        <!--Result View Controller-->
+        <scene sceneID="q7T-QM-Qyq">
             <objects>
-                <tabBarController id="RA9-o1-BQn" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gWh-dk-8OC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemGreenColor"/>
-                    </tabBar>
+                <viewController storyboardIdentifier="ResultViewController" id="rq7-Cd-Z6S" customClass="ResultViewController" customModule="WhatDrink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aHR-W4-MWI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zcx-GB-DzH">
+                                <rect key="frame" x="124" y="94" width="166" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="aDy-L3-2fQ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQb-dI-YEP">
+                                <rect key="frame" x="62" y="376" width="290" height="394"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="음료 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-gg-cBo">
+                                        <rect key="frame" x="8" y="10" width="274" height="42"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="38"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="음료 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKk-iP-d6Z">
+                                        <rect key="frame" x="86.5" y="60" width="117" height="34"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="MMO-gg-cBo" firstAttribute="centerX" secondItem="CQb-dI-YEP" secondAttribute="centerX" id="2ja-OQ-GBh"/>
+                                    <constraint firstItem="MMO-gg-cBo" firstAttribute="leading" secondItem="CQb-dI-YEP" secondAttribute="leading" constant="8" id="exg-E4-gol"/>
+                                    <constraint firstItem="KKk-iP-d6Z" firstAttribute="top" secondItem="MMO-gg-cBo" secondAttribute="bottom" constant="8" symbolic="YES" id="hnv-3W-1xn"/>
+                                    <constraint firstAttribute="bottom" secondItem="KKk-iP-d6Z" secondAttribute="bottom" constant="10" id="n9X-g7-b1f"/>
+                                    <constraint firstItem="MMO-gg-cBo" firstAttribute="top" secondItem="CQb-dI-YEP" secondAttribute="top" constant="10" id="va7-pP-HQl"/>
+                                    <constraint firstItem="KKk-iP-d6Z" firstAttribute="centerX" secondItem="CQb-dI-YEP" secondAttribute="centerX" id="xsv-Zz-Dug"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwb-pj-llJ">
+                                <rect key="frame" x="62" y="697" width="290" height="150"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bV0-kG-2lB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="27"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="음료 분석 다시하기"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="rq7-Cd-Z6S" eventType="touchUpInside" id="Tmc-3m-ca0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zbu-hQ-Thi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zcx-GB-DzH" firstAttribute="top" secondItem="Zbu-hQ-Thi" secondAttribute="top" constant="50" id="4o1-hz-HWf"/>
+                            <constraint firstItem="fwb-pj-llJ" firstAttribute="width" secondItem="CQb-dI-YEP" secondAttribute="width" id="7Li-rL-ayA"/>
+                            <constraint firstItem="CQb-dI-YEP" firstAttribute="centerX" secondItem="Zbu-hQ-Thi" secondAttribute="centerX" id="Bmn-ss-i4S"/>
+                            <constraint firstItem="zcx-GB-DzH" firstAttribute="centerX" secondItem="Zbu-hQ-Thi" secondAttribute="centerX" id="Dg9-2q-ciM"/>
+                            <constraint firstItem="CQb-dI-YEP" firstAttribute="top" secondItem="zcx-GB-DzH" secondAttribute="bottom" constant="15" id="JuA-rX-j42"/>
+                            <constraint firstItem="zcx-GB-DzH" firstAttribute="width" secondItem="aHR-W4-MWI" secondAttribute="width" multiplier="0.4" id="LDn-R5-PjH"/>
+                            <constraint firstItem="fwb-pj-llJ" firstAttribute="centerX" secondItem="Zbu-hQ-Thi" secondAttribute="centerX" id="WyG-ff-mwu"/>
+                            <constraint firstItem="CQb-dI-YEP" firstAttribute="width" secondItem="aHR-W4-MWI" secondAttribute="width" multiplier="0.7" id="XXO-yK-ypU"/>
+                            <constraint firstItem="fwb-pj-llJ" firstAttribute="top" secondItem="CQb-dI-YEP" secondAttribute="bottom" constant="15" id="jgC-Ak-3f4"/>
+                            <constraint firstItem="Zbu-hQ-Thi" firstAttribute="bottom" secondItem="fwb-pj-llJ" secondAttribute="bottom" constant="15" id="rZe-To-cJ6"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <segue destination="fcD-6u-IkV" kind="relationship" relationship="viewControllers" id="9QF-BQ-FgC"/>
-                        <segue destination="KzC-AL-dYa" kind="relationship" relationship="viewControllers" id="KeZ-jK-EAv"/>
+                        <outlet property="goHomeButton" destination="fwb-pj-llJ" id="iEc-tm-JLR"/>
+                        <outlet property="grayView" destination="CQb-dI-YEP" id="GLX-bo-0tn"/>
+                        <outlet property="imageView" destination="zcx-GB-DzH" id="5fJ-aI-PjM"/>
+                        <outlet property="infoLabel" destination="KKk-iP-d6Z" id="CaM-xB-F8n"/>
+                        <outlet property="resultLabel" destination="MMO-gg-cBo" id="Vvf-XY-7IZ"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="roz-jc-QhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wc-uh-v89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="-119"/>
+            <point key="canvasLocation" x="3540.579710144928" y="-425.22321428571428"/>
         </scene>
     </scenes>
     <resources>
-        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
