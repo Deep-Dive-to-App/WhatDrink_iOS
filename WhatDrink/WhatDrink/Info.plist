@@ -66,5 +66,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>뭐마실뀨는 음료를 찍기 위해 카메라를 사용합니다.</string>
 </dict>
 </plist>

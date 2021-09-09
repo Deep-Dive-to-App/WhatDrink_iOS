@@ -51,10 +51,16 @@ class CameraViewController: UIViewController {
         blurBGView.layer.masksToBounds = true
     }
     
-    // 카메라 전환 액션함수
+    // 액션 함수들
+    /// 뒤로가기 액션 함수
     @IBAction func backButtonTapped(_ sender: Any) {
-        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let drinkDetectorVC = storyBoard.instantiateViewController(identifier: "DrinkDetectorViewController") as! DrinkDetectorViewController
+        drinkDetectorVC.modalPresentationStyle = .fullScreen
+        present(drinkDetectorVC, animated: false, completion: nil)
     }
+    
+    /// 카메라 전환 액션 함수
     @IBAction func switchButtonTapped(_ sender: Any) {
         sessionQueue.async {
             /// 반대편 카메라 찾기
@@ -91,6 +97,8 @@ class CameraViewController: UIViewController {
             }
         }
     }
+    
+    /// 카메라 촬영 액션 함수
     @IBAction func captureButtonTapped(_ sender: Any) {
         let videoPreviewLayerOrientation = self.previewView.videoPreviewLayer.connection?.videoOrientation
         sessionQueue.async {

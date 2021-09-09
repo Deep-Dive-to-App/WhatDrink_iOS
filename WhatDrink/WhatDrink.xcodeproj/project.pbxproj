@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F620D4C26E618FE00556FBD /* SettingVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F620D4B26E618FE00556FBD /* SettingVeiwController.swift */; };
+		4F620D4F26E61FF100556FBD /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F620D4E26E61FED00556FBD /* NanumSquareRoundB.ttf */; };
+		4F620D5226E6296C00556FBD /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F620D5126E6296C00556FBD /* Camera.storyboard */; };
+		4F620D5426E6298600556FBD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F620D5326E6298600556FBD /* CameraViewController.swift */; };
+		4F620D5626E629E500556FBD /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F620D5526E629E500556FBD /* PreviewView.swift */; };
 		4F90C29526E60B8F00E3A3B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90C29426E60B8F00E3A3B9 /* AppDelegate.swift */; };
 		4F90C29726E60B8F00E3A3B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90C29626E60B8F00E3A3B9 /* SceneDelegate.swift */; };
-		4F90C29926E60B8F00E3A3B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90C29826E60B8F00E3A3B9 /* ViewController.swift */; };
+		4F90C29926E60B8F00E3A3B9 /* DrinkDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90C29826E60B8F00E3A3B9 /* DrinkDetectorViewController.swift */; };
 		4F90C29C26E60B8F00E3A3B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F90C29A26E60B8F00E3A3B9 /* Main.storyboard */; };
 		4F90C29E26E60B9100E3A3B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F90C29D26E60B9100E3A3B9 /* Assets.xcassets */; };
 		4F90C2A126E60B9100E3A3B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F90C29F26E60B9100E3A3B9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F620D4B26E618FE00556FBD /* SettingVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVeiwController.swift; sourceTree = "<group>"; };
+		4F620D4E26E61FED00556FBD /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
+		4F620D5126E6296C00556FBD /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		4F620D5326E6298600556FBD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		4F620D5526E629E500556FBD /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		4F90C29126E60B8F00E3A3B9 /* WhatDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F90C29426E60B8F00E3A3B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F90C29626E60B8F00E3A3B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F90C29826E60B8F00E3A3B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F90C29826E60B8F00E3A3B9 /* DrinkDetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetectorViewController.swift; sourceTree = "<group>"; };
 		4F90C29B26E60B8F00E3A3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F90C29D26E60B9100E3A3B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F90C2A026E60B9100E3A3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +47,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F620D4826E6153400556FBD /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4F90C29426E60B8F00E3A3B9 /* AppDelegate.swift */,
+				4F90C29626E60B8F00E3A3B9 /* SceneDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		4F620D4926E6156B00556FBD /* drinkDetector */ = {
+			isa = PBXGroup;
+			children = (
+				4F90C29826E60B8F00E3A3B9 /* DrinkDetectorViewController.swift */,
+			);
+			path = drinkDetector;
+			sourceTree = "<group>";
+		};
+		4F620D4A26E618D600556FBD /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				4F620D4B26E618FE00556FBD /* SettingVeiwController.swift */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		4F620D4D26E61FD900556FBD /* font */ = {
+			isa = PBXGroup;
+			children = (
+				4F620D4E26E61FED00556FBD /* NanumSquareRoundB.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		4F620D5026E6294800556FBD /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				4F620D5126E6296C00556FBD /* Camera.storyboard */,
+				4F620D5326E6298600556FBD /* CameraViewController.swift */,
+				4F620D5526E629E500556FBD /* PreviewView.swift */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
 		4F90C28826E60B8F00E3A3B9 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +109,33 @@
 		4F90C29326E60B8F00E3A3B9 /* WhatDrink */ = {
 			isa = PBXGroup;
 			children = (
-				4F90C29426E60B8F00E3A3B9 /* AppDelegate.swift */,
-				4F90C29626E60B8F00E3A3B9 /* SceneDelegate.swift */,
-				4F90C29826E60B8F00E3A3B9 /* ViewController.swift */,
-				4F90C29A26E60B8F00E3A3B9 /* Main.storyboard */,
+				4F90C2A826E60C6000E3A3B9 /* features */,
+				4F620D4826E6153400556FBD /* delegate */,
+				4F620D4D26E61FD900556FBD /* font */,
 				4F90C29D26E60B9100E3A3B9 /* Assets.xcassets */,
 				4F90C29F26E60B9100E3A3B9 /* LaunchScreen.storyboard */,
 				4F90C2A226E60B9100E3A3B9 /* Info.plist */,
 			);
 			path = WhatDrink;
+			sourceTree = "<group>";
+		};
+		4F90C2A826E60C6000E3A3B9 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				4F620D5026E6294800556FBD /* camera */,
+				4F620D4A26E618D600556FBD /* setting */,
+				4F620D4926E6156B00556FBD /* drinkDetector */,
+				4F90C2A926E60DC800E3A3B9 /* main */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		4F90C2A926E60DC800E3A3B9 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				4F90C29A26E60B8F00E3A3B9 /* Main.storyboard */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +198,8 @@
 				4F90C2A126E60B9100E3A3B9 /* LaunchScreen.storyboard in Resources */,
 				4F90C29E26E60B9100E3A3B9 /* Assets.xcassets in Resources */,
 				4F90C29C26E60B8F00E3A3B9 /* Main.storyboard in Resources */,
+				4F620D4F26E61FF100556FBD /* NanumSquareRoundB.ttf in Resources */,
+				4F620D5226E6296C00556FBD /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F90C29926E60B8F00E3A3B9 /* ViewController.swift in Sources */,
+				4F90C29926E60B8F00E3A3B9 /* DrinkDetectorViewController.swift in Sources */,
+				4F620D5426E6298600556FBD /* CameraViewController.swift in Sources */,
 				4F90C29526E60B8F00E3A3B9 /* AppDelegate.swift in Sources */,
 				4F90C29726E60B8F00E3A3B9 /* SceneDelegate.swift in Sources */,
+				4F620D4C26E618FE00556FBD /* SettingVeiwController.swift in Sources */,
+				4F620D5626E629E500556FBD /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
